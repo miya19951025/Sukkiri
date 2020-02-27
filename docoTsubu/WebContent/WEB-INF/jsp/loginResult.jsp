@@ -18,7 +18,7 @@ User loginUser = (User) session.getAttribute("loginUser");
 	<a href="/docoTsubu/Main">つぶやき投稿・一覧へ</a>
 	<% } else { %>
 	<p>ログインに失敗しました</p>
-	<a href = "/docoTubu/">TOPへ</a>
+	<a href = "/docoTsubu/">TOPへ</a>
 	<% } %>
 
 </body>

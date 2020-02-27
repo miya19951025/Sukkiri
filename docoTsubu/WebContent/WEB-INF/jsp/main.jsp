@@ -4,9 +4,9 @@
 <%
 // セッションスコープに保存された情報を習得
 User loginUser = (User) session.getAttribute("loginUser");
-// アプリケーションスコープに保存されたつぶやきリストを習得
+// リクエストスコープに保存されたつぶやきリストを習得
 List<Mutter> mutterList =
-	(List<Mutter>) application.getAttribute("mutterList");
+	(List<Mutter>) request.getAttribute("mutterList");
 	//リクエストスコープに保存されたエラーメッセージを習得
 	String errorMsg = (String) request.getAttribute("errorMsg");
  %>
