@@ -11,6 +11,7 @@
 <form action="/docoTsubu/Login" method="post">
 ユーザー名:<input type="text" name="name"><br>
 パスワード:<input type="password" name="pass"><br>
+ID:<input type="text" name="id"><br>
 <input type="submit" value="ログイン">
 </form>
 </body>

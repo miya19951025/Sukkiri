@@ -8,9 +8,10 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class GetConnection   {
-	String JDBC_URL;
-	String DB_USER;
-	String DB_PASS;
+	private String JDBC_URL;
+	private String DB_USER;
+	private String DB_PASS;
+	private Connection conn;
 
 
 	private static GetConnection theInstance;
@@ -21,7 +22,7 @@ public class GetConnection   {
 		JDBC_URL = p.getProperty("JFBC_URL");
 		DB_USER = p.getProperty("DB_USER");
 		DB_PASS = p.getProperty("DB_PASS");
-		Connection conn = DriverManager.getConnection(
+		conn = DriverManager.getConnection(
 				JDBC_URL, DB_USER, DB_PASS);
 		} catch (Exception e) {
 			System.out.println("エラーが発生しました");

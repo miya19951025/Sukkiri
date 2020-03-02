@@ -24,9 +24,10 @@ public class Login extends HttpServlet {
 		// リクエストパラメーターを習得
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
+		String id = request.getParameter("id");
 
 		// Userインスタンス(ユーザー情報)の生成
-		User user = new User(name, pass);
+		User user = new User(name, pass, id);
 
 		//ログイン処理
 		LoginLogic loginLogic = new LoginLogic();

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,10 +29,7 @@ public class Main extends HttpServlet {
 
 		//入力値をチェック
 		if(text != null && text.length() != 0) {
-			// アプリケーションスコープに保存されたつぶやきリストを習得
-			ServletContext application = this.getServletContext();
-			List<Mutter> mutterList =
-					(List<Mutter>) application.getAttribute("mutterList");
+
 
 			//セッションスコープに保存されたユーザー情報を習得
 			HttpSession session = request.getSession();

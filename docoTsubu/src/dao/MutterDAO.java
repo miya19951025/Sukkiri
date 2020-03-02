@@ -21,6 +21,7 @@ public class MutterDAO {
 		List<Mutter> mutterList = new ArrayList<>();
 
 		//データベース接続
+
 		try(Connection conn = DriverManager.getConnection(
 				JDBC_URL, DB_USER, DB_PASS)) {
 			// SELECT文の準備
